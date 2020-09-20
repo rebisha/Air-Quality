@@ -1,5 +1,8 @@
 import React from 'react'
 import * as R from 'ramda'
+// component
+import Form from './Component/Form/Form'
+
 import 'tachyons'
 
 const App = ({
@@ -33,11 +36,7 @@ const App = ({
               type="text"
               value={search}
               placeholder="Melbourne"
-              onChange={R.compose(
-                setSearch,
-                R.prop('value'),
-                R.prop('target')
-              )}
+              onChange={R.compose(setSearch, R.prop('value'), R.prop('target'))}
               className="br1 br--top br--left ba b--light-gray ph3 pv2 flex-grow-1 flex-shrink-1"
             />
             <button
@@ -53,8 +52,9 @@ const App = ({
         <div className="br1 br--bottom flex flex-column w5 bb bl br b--light-gray border-box">
           {searchData ? (
             <div className="pv2">
-              {searchData.map(({ station: { name } }) => (
+              {searchData.map(({ station: { name }, id }) => (
                 <button
+                  key={id}
                   className="pv2 ph3 flex-grow-0 flex-shrink-0 b-white ba-0 b--white tl w-100 border-box"
                   onClick={() =>
                     fetch(
@@ -98,6 +98,8 @@ const App = ({
         </div>
       )}
     </div>
+
+    <Form />
   </div>
 )
 

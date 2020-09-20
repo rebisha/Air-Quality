@@ -1,0 +1,16 @@
+.form {
+  margin: 6px auto;
+
+  &-input,
+  &-button {
+    height: 40px;
+  }
+
+  &-button {
+    cursor: pointer;
+  }
+
+  &-result {
+    margin: 0 auto 10px auto;
+  }
+}
