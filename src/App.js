@@ -1,7 +1,7 @@
 import React from 'react'
 import * as R from 'ramda'
 // component
-import Form from './Component/Form/Form'
+import Homepage from './Page/Homepage/Homepage'
 
 import 'tachyons'
 
@@ -99,7 +99,7 @@ const App = ({
       )}
     </div>
 
-    <Form />
+    <Homepage />
   </div>
 )
 
