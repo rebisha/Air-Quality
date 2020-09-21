@@ -1,0 +1,22 @@
+.aqindex {
+  &-index {
+    padding: 3px;
+    margin: 2px;
+  }
+
+  &-unhealthy__sensitive {
+    background-color: #ff9933bf;
+  }
+
+  &-unhealthy {
+    background-color: #cc0033bf;
+  }
+
+  &-unhealthy__very {
+    background-color: #660099bf;
+  }
+
+  &-hazardous {
+    background-color: #7e0023;
+  }
+}

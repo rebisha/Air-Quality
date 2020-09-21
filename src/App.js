@@ -1,6 +1,7 @@
 import React from 'react'
 import * as R from 'ramda'
 // component
+import AQIndex from './Component/AQIndex/AQIndex'
 import Homepage from './Page/Homepage/Homepage'
 
 import 'tachyons'
@@ -14,9 +15,10 @@ const App = ({
   setSearchData,
 }) => (
   <div className="flex flex-column">
-    <header className="f2 pv3 ph4 bg-light-purple white flex-grow-0 flex-shrink-0">
+    <header className="flex f2 pv3 ph4 bg-light-purple white flex-grow-0 flex-shrink-0">
       Air Quality Index
     </header>
+    <AQIndex />
     <div className="pa5 flex-grow-1 flex-shrink-0 flex items-start">
       <div>
         <form
