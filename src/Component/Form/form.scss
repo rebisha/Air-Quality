@@ -1,10 +1,12 @@
+@import '../../assets/styles/functions';
+
 .form {
-  &-input,
-  &-button {
-    height: 40px;
+  &-input {
+    height: units(40px);
   }
 
   &-button {
     cursor: pointer;
+    height: units(40px);
   }
 }

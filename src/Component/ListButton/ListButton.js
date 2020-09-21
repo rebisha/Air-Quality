@@ -4,7 +4,6 @@ import axios from 'axios'
 import Button from '../Button/Button'
 
 import 'tachyons'
-import './listButton.scss'
 
 const ListButton = ({ item, setFeed }) => {
   const {

@@ -1,5 +1,8 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
 .feed {
-  width: 512px;
+  width: 100%;
 
   &-name,
   &-url {
@@ -8,5 +11,13 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @include medium() {
+    width: units(512px);
+  }
+
+  @include large() {
+    width: units(512px);
   }
 }

@@ -1,0 +1,14 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/functions';
+
+.header {
+  font-size: units(24px);
+
+  @include medium() {
+    font-size: units(36px);
+  }
+
+  @include large() {
+    font-size: units(36px);
+  }
+}

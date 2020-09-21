@@ -1,10 +1,11 @@
 import React from 'react'
 
 import 'tachyons'
+import './header.scss'
 
 const Header = () => {
   return (
-    <header className="flex f2 pv3 ph4 bg-light-purple white flex-grow-0 flex-shrink-0">
+    <header className="pv3 ph4 bg-light-purple white header">
       Air Quality Index
     </header>
   )

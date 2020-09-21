@@ -1,12 +1,15 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+
 .aqindex {
-  width: 300px;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  width: units(300px);
 
   &-index {
-    padding: 3px;
-    margin: 2px 5px;
-    min-width: 75px;
+    margin: units(2px 5px);
+    min-width: units(75px);
+    padding: units(3px);
     text-align: center;
   }
 
@@ -15,18 +18,28 @@
   }
 
   &-unhealthy__sensitive {
-    background-color: #ff9933bf;
+    background-color: $sensitive;
   }
 
   &-unhealthy {
-    background-color: #cc0033bf;
+    background-color: $unhealthy;
   }
 
   &-unhealthy__very {
-    background-color: #660099bf;
+    background-color: $veryUnhealthy;
   }
 
   &-hazardous {
-    background-color: #7e0023;
+    background-color: $hazardous;
+  }
+
+  @include medium() {
+    bottom: 0;
+    position: fixed;
+  }
+
+  @include large() {
+    bottom: 0;
+    position: fixed;
   }
 }

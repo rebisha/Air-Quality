@@ -1,1 +1,39 @@
+@import '../../assets/styles/mixins';
 
+.homepage {
+  flex-direction: column;
+
+  &-result {
+    width: 100%;
+  }
+
+  &-feed {
+    width: 100%;
+  }
+
+  @include medium() {
+    flex-direction: row;
+
+    &-result {
+      width: 40%;
+    }
+
+    &-feed {
+      margin-left: 1rem;
+      width: 60%;
+    }
+  }
+
+  @include large() {
+    flex-direction: row;
+
+    &-result {
+      width: 30%;
+    }
+
+    &-feed {
+      margin-left: 4rem;
+      width: 70%;
+    }
+  }
+}

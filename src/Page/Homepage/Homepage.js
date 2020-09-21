@@ -12,11 +12,11 @@ const Homepage = () => {
   const [feed, setFeed] = useState()
 
   return (
-    <div className="w-100 flex">
-      <div className="w-30 flex flex-column homepage">
-        <Form setSearchData={setSearchData} />
+    <div className="w-100 flex homepage">
+      <div className="flex flex-column homepage-result">
+        <Form setSearchData={setSearchData} setFeed={setFeed} />
 
-        <div className="homepage-result mt2">
+        <div className="homepage-listButton mt2">
           {searchData &&
             searchData.map((item) => (
               <ListButton key={item.uid} item={item} setFeed={setFeed} />
@@ -24,7 +24,10 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="w-70 ml5 pv4" id="homapageFeed">
+      <div
+        className="flex items-baseline pv4 w-70 homepage-feed"
+        id="homapageFeed"
+      >
         {feed === 'Unknown station' ? (
           <p>There is currently no data for this station</p>
         ) : (

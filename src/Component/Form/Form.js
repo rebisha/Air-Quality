@@ -4,7 +4,7 @@ import axios from 'axios'
 import 'tachyons'
 import './form.scss'
 
-const Form = ({ setSearchData }) => {
+const Form = ({ setSearchData, setFeed }) => {
   const [search, setSearch] = useState('')
   const [validation, setValidation] = useState('')
 
@@ -29,6 +29,7 @@ const Form = ({ setSearchData }) => {
         setValidation('')
       }
       setSearchData(data)
+      setFeed()
     } catch (error) {
       console.log(error)
     }

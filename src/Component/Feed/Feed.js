@@ -12,17 +12,17 @@ const Feed = ({ feed }) => {
   } = feed
 
   return (
-    <div className="ba b--light-gray br1 ph3 mh3 feed" key={idx}>
+    <div className="ba b--light-gray br1 ph3 feed" key={idx}>
       <div className="pv2 flex justify-between">
         <a
-          className="black feed-name"
+          className="black fw7 feed-name"
           href={url}
           target="_blank"
           rel="noopener noreferrer"
         >
           {name}
         </a>
-        <span>
+        <span className="f6">
           ({geo[0].toFixed(4)}, {geo[1].toFixed(4)})
         </span>
       </div>
