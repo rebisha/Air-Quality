@@ -41,6 +41,12 @@ const ListButton = ({ item, setFeed }) => {
   const handleClick = async (e) => {
     e.preventDefault()
 
+    const homepageFeed = document.getElementById('homapageFeed')
+    homepageFeed.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+
     try {
       const fetchUrl = await axios.get(
         `http://api.waqi.info/feed/${name}/?token=8d8e978e647d2b0a8c17c04ba331c0117cd06dc8`
