@@ -1,7 +1,15 @@
 .aqindex {
+  width: 300px;
+
   &-index {
     padding: 3px;
-    margin: 2px;
+    margin: 2px 5px;
+    min-width: 75px;
+    text-align: center;
+  }
+
+  &-title {
+    text-align: center;
   }
 
   &-unhealthy__sensitive {

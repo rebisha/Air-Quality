@@ -18,7 +18,10 @@ const App = ({
     <header className="flex f2 pv3 ph4 bg-light-purple white flex-grow-0 flex-shrink-0">
       Air Quality Index
     </header>
-    <AQIndex />
+    <div className="w-100 flex justify-end">
+      <AQIndex />
+    </div>
+
     <div className="pa5 flex-grow-1 flex-shrink-0 flex items-start">
       <div>
         <form
@@ -52,6 +55,7 @@ const App = ({
           </div>
         </form>
         <div className="br1 br--bottom flex flex-column w5 bb bl br b--light-gray border-box">
+          {console.log(searchData)}
           {searchData ? (
             <div className="pv2">
               {searchData.map(({ station: { name }, id }) => (

@@ -5,22 +5,38 @@ import './aqindex.scss'
 
 const AQIndex = () => {
   return (
-    <div className="aqindex f6 flex flex-wrap items-center white justify-end">
-      <span className="aqindex-index aqindex-aqi bg-light-gray black">
-        Air Quality Index
-      </span>
-      <span className="aqindex-index aqindex-good bg-green">Good</span>
-      <span className="aqindex-index aqindex-moderate black bg-yellow">
+    <div className="aqindex bg-light-gray pa2 f6 flex flex-column flex-wrap justify-end">
+      <h4 className="aqindex-title mt0">Air Quality Index</h4>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-good bg-green white">0 - 50</div>
+        Good
+      </div>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-moderate black bg-yellow">
+          50 - 100
+        </div>
         Moderate
-      </span>
-      <span className="aqindex-index aqindex-unhealthy__sensitive">
+      </div>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-unhealthy__sensitive white">
+          100 - 150
+        </div>
         Unhealthy for sensitive groups
-      </span>
-      <span className="aqindex-index aqindex-unhealthy">Unhealthy</span>
-      <span className="aqindex-index aqindex-unhealthy__very">
+      </div>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-unhealthy white">150 - 200</div>
+        Unhealthy
+      </div>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-unhealthy__very white">
+          200 - 300
+        </div>
         Very Unhealthy
-      </span>
-      <span className="aqindex-index aqindex-hazardous">Hazardous</span>
+      </div>
+      <div className="flex items-center">
+        <div className="aqindex-index aqindex-hazardous white">> 300</div>
+        Hazardous
+      </div>
     </div>
   )
 }
