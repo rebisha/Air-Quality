@@ -37,7 +37,7 @@ const ListButton = ({ item }) => {
     }
   }, [aqi, uid])
 
-  return <Button name={name} url={url} uid={uid} />
+  return <Button name={name} url={`https://aqicn.org/city/${url}`} uid={uid} />
 }
 
 export default ListButton
