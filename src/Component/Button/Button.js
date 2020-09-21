@@ -2,16 +2,15 @@ import React from 'react'
 import 'tachyons'
 import './button.scss'
 
-const Button = ({ name, url, uid }) => {
+const Button = ({ name, uid, handleClick }) => {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <button
-        className="b--none bg-light-gray btn fw7 ph3 pv3 tl w-100"
-        id={uid}
-      >
-        {name}
-      </button>
-    </a>
+    <button
+      className="b--none bg-light-gray btn fw7 ph3 pv3 tl w-100 white"
+      id={uid}
+      onClick={handleClick}
+    >
+      {name}
+    </button>
   )
 }
 

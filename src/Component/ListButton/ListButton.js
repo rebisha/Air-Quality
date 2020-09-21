@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react'
+import axios from 'axios'
 // component
 import Button from '../Button/Button'
 
 import 'tachyons'
 import './listButton.scss'
 
-const ListButton = ({ item }) => {
+const ListButton = ({ item, setFeed }) => {
   const {
     uid,
     aqi,
-    station: { name, url },
+    station: { name },
   } = item
 
   useEffect(() => {
@@ -37,7 +38,24 @@ const ListButton = ({ item }) => {
     }
   }, [aqi, uid])
 
-  return <Button name={name} url={`https://aqicn.org/city/${url}`} uid={uid} />
+  const handleClick = async (e) => {
+    e.preventDefault()
+
+    try {
+      const fetchUrl = await axios.get(
+        `http://api.waqi.info/feed/${name}/?token=8d8e978e647d2b0a8c17c04ba331c0117cd06dc8`
+      )
+
+      const fetchData = await fetchUrl.data
+      const data = fetchData.data
+
+      setFeed(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  return <Button name={name} uid={uid} handleClick={handleClick} />
 }
 
 export default ListButton

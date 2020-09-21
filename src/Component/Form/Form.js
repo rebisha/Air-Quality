@@ -36,7 +36,7 @@ const Form = ({ setSearchData }) => {
 
   return (
     <form
-      className="flex flex-column form w-30 justify-between"
+      className="flex flex-column form justify-between"
       onSubmit={handleSubmit}
     >
       <div className="flex form-wrapper">
