@@ -1,6 +1,6 @@
-import React from 'react'
-import 'tachyons'
-import './button.scss'
+import React from 'react';
+import 'tachyons';
+import './button.scss';
 
 const Button = ({ name, uid, handleClick }) => {
   return (
@@ -11,7 +11,7 @@ const Button = ({ name, uid, handleClick }) => {
     >
       {name}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

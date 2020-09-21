@@ -1,39 +1,39 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-import 'tachyons'
-import './form.scss'
+import 'tachyons';
+import './form.scss';
 
 const Form = ({ setSearchData, setFeed }) => {
-  const [search, setSearch] = useState('')
-  const [validation, setValidation] = useState('')
+  const [search, setSearch] = useState('');
+  const [validation, setValidation] = useState('');
 
   const handleChange = (e) => {
-    setSearch(e.target.value)
-  }
+    setSearch(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
       const fetchUrl = await axios.get(
         `http://api.waqi.info/search/?keyword=${search}&token=8d8e978e647d2b0a8c17c04ba331c0117cd06dc8`
-      )
+      );
 
-      const fetchData = await fetchUrl.data
-      const data = fetchData.data
+      const fetchData = await fetchUrl.data;
+      const data = fetchData.data;
 
       if (data.length === 0) {
-        setValidation('Search for a valid city name')
+        setValidation('Search for a valid city name');
       } else {
-        setValidation('')
+        setValidation('');
       }
-      setSearchData(data)
-      setFeed()
+      setSearchData(data);
+      setFeed();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <form
@@ -63,7 +63,7 @@ const Form = ({ setSearchData, setFeed }) => {
         ''
       )}
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

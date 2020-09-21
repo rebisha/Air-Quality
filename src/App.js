@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 // component
-import Header from './Component/Header/Header'
-import AQIndex from './Component/AQIndex/AQIndex'
-import Homepage from './Page/Homepage/Homepage'
+import Header from './Component/Header/Header';
+import AQIndex from './Component/AQIndex/AQIndex';
+import Homepage from './Page/Homepage/Homepage';
 
-import 'tachyons'
+import 'tachyons';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
         <Homepage />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

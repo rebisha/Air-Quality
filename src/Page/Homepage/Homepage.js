@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // component
-import Form from '../../Component/Form/Form'
-import ListButton from '../../Component/ListButton/ListButton'
-import Feed from '../../Component/Feed/Feed'
+import Form from '../../Component/Form/Form';
+import ListButton from '../../Component/ListButton/ListButton';
+import Feed from '../../Component/Feed/Feed';
 
-import 'tachyons'
-import './homePage.scss'
+import 'tachyons';
+import './homePage.scss';
 
 const Homepage = () => {
-  const [searchData, setSearchData] = useState([])
-  const [feed, setFeed] = useState()
+  const [searchData, setSearchData] = useState([]);
+  const [feed, setFeed] = useState();
 
   return (
     <div className="w-100 flex homepage">
@@ -35,7 +35,7 @@ const Homepage = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

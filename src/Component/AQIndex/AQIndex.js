@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import 'tachyons'
-import './aqindex.scss'
+import 'tachyons';
+import './aqindex.scss';
 
 const AQIndex = () => {
   return (
@@ -43,7 +43,7 @@ const AQIndex = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AQIndex
+export default AQIndex;

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import 'tachyons'
-import './feed.scss'
+import 'tachyons';
+import './feed.scss';
 
 const Feed = ({ feed }) => {
   const {
@@ -9,7 +9,7 @@ const Feed = ({ feed }) => {
     aqi,
     city: { name, geo, url },
     attributions,
-  } = feed
+  } = feed;
 
   return (
     <div className="ba b--light-gray br1 ph3 feed" key={idx}>
@@ -42,7 +42,7 @@ const Feed = ({ feed }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Feed
+export default Feed;
