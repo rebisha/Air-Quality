@@ -21,14 +21,14 @@ const Form = ({ setSearchData, setFeed }) => {
       );
 
       const fetchData = await fetchUrl.data;
-      const data = fetchData.data;
+      const searchResult = fetchData.data;
 
-      if (data.length === 0) {
+      if (searchResult.length === 0) {
         setValidation('Search for a valid city name');
       } else {
         setValidation('');
       }
-      setSearchData(data);
+      setSearchData(searchResult);
       setFeed();
     } catch (error) {
       console.log(error);
