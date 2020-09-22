@@ -6,6 +6,7 @@ const Button = ({ name, uid, handleClick }) => {
   return (
     <button
       className="b--none bg-light-gray btn fw7 ph3 pv3 tl w-100 white"
+      data-testid={uid}
       id={uid}
       onClick={handleClick}
     >

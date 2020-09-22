@@ -49,6 +49,7 @@ const Form = ({ setSearchData, setFeed }) => {
           onChange={handleChange}
         />
         <button
+          data-testid="submit"
           type="submit"
           className="b--none flex items-center pa3 form-button"
         >
